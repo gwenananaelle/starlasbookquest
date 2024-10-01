@@ -1,0 +1,48 @@
+---
+layout: framework
+---
+
+<style type="text/css" media="screen">
+    #content {
+      display: none;
+    }
+</style>
+<h1>{{ page.title }}</h1>
+<div id="lock-section">
+    <p>This page is locked. Please enter the password:</p>
+    <input type="password" id="password-input" placeholder="Enter password">
+    <button onclick="unlockPage()">Unlock</button>
+    <p id="error-message" style="color: red; display: none;">Incorrect password, try again.</p>
+</div>
+
+<div id="content" style="display: none;">
+    {{ content }}
+    <!-- Add your book content here -->
+</div>
+
+<script>
+    // Set the correct password for this page
+    const correctPassword = '{{page.password}}';
+
+    // Check if the page was already unlocked
+    if (localStorage.getItem('{{page.locked}}') === "false") {
+        document.getElementById('lock-section').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+
+    function unlockPage() {
+        const inputPassword = document.getElementById("password-input").value;
+        if (inputPassword === correctPassword) {
+            // Store in localStorage that this page is unlocked
+            localStorage.setItem('{{page.locked}}', "false");
+            
+            // Hide the lock section and show the content
+            document.getElementById('lock-section').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        } else {
+            // Show error message
+            document.getElementById('error-message').style.display = 'block';
+        }
+    }
+</script>
+
