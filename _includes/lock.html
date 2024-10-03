@@ -1,6 +1,7 @@
 <div class="visible" id="lock-section{{include.lockNumber}}">
     <h1>{{ include.title }}</h1>
-    <p>This page is locked. Please enter the password:</p>
+    <p>Pour voir ce livre vous devez rentrer le mot de passe.</p>
+    <p>{{include.clue}}</p>
     <input type="password" id="password-input{{include.lockNumber}}" placeholder="Enter password">
     <button onclick="unlockPage()">Unlock</button>
     <p id="error-message{{include.lockNumber}}" class="hidden">Incorrect password, try again.</p>

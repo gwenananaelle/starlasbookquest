@@ -1,7 +1,10 @@
 ---
 layout: post
 ---
-{% include lock.html title="Book 4" password="genesedelacite" lockNumber=4%}
+{% capture clue_content %}
+<p>Le mot de passe est le nom d'un livre que vous trouverez à l'aide de <a href="/2024/09/02/farsector.html">ce post.</a></p>
+{% endcapture %}
+{% include lock.html title="Book 4" password="genesedelacite" lockNumber=4 clue=clue_content %}
 <section id="content-section4" class="hidden">
 <h1>Genèse de la cité</h1>
 <p> titre original : "The City We Became"</p>

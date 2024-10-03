@@ -1,7 +1,10 @@
 ---
 layout: post
 ---
-{% include lock.html title="Book 5" password="babel" lockNumber=5%}
+{% capture clue_content %}
+<p>Le mot de passe est le nom d'un mythe que vous trouverez à l'aide de <a href="/2024/09/01/translation.html">ce post.</a></p>
+{% endcapture %}
+{% include lock.html title="Book 5" password="babel" lockNumber=5 clue=clue_content %}
 <section id="content-section5" class="hidden">
 <h1>Babel</h1>
 <p> Auteur: R. F. Kuang</p>

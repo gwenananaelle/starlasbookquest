@@ -1,7 +1,12 @@
 ---
 layout: post
 ---
-{% include lock.html title="Book 1" password="eppaln" lockNumber=1%}
+{% capture clue_content %}
+<p>Le mot de passe est un lieu que vous trouverez à l'aide de <a href="/2024/09/07/covers.html">ce post</a> et de <a href="/2024/09/06/maps.html">celui là</a></p>
+{% endcapture %}
+
+{% include lock.html title="Book 1" password="eppaln" lockNumber=1 clue=clue_content %}
+
 <section id="content-section1" class="hidden">
 <h1>Terremer (édition intégrale)</h1>
 <img src="/assets/images/terremer.jpeg" alt="couverture de terremer">

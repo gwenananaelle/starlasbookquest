@@ -1,7 +1,11 @@
 ---
 layout: post
 ---
-{% include lock.html title="Book 2" password="chambers" lockNumber=2%}
+{% capture clue_content %}
+<p>Le mot de passe est le nom de famille d'un auteur que vous trouverez à l'aide de <a href="/2024/09/05/crew.html">ce post.</a></p>
+{% endcapture %}
+
+{% include lock.html title="Book 2" password="chambers" lockNumber=2 clue=clue_content %}
 <section id="content-section2" class="hidden">
 <h1>Les Voyageurs (série)</h1>
 <p> titre original : "Wayfarers"</p>

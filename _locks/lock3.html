@@ -1,7 +1,11 @@
 ---
 layout: post
 ---
-{% include lock.html title="Book 3" password="9781583226988" lockNumber=3%}
+{% capture clue_content %}
+<p>Le mot de passe est un ISBN (13 chiffres) que vous trouverez à l'aide de <a href="/2024/09/04/butler.html">ce post et de <a href="/2024/09/03/coloring.html">celui là</a>.</p>
+{% endcapture %}
+
+{% include lock.html title="Book 3" password="9781583226988" lockNumber=3 clue=clue_content %}
 <section id="content-section3" class="hidden">
 <h1>Bloodchild and Other Stories</h1>
 <p> Auteur : Octavia E. Butler</p>
