@@ -1,9 +1,8 @@
 ---
-layout: lock
-title: Book 1
-password: eppaln
-locked: lock1
+layout: post
 ---
+{% include lock.html title="Book 1" password="eppaln" lockNumber=1%}
+<section id="content-section1" class="hidden">
 <h1>Terremer (édition intégrale)</h1>
 <img src="/assets/images/terremer.jpeg" alt="couverture de terremer">
 <p>
@@ -16,3 +15,4 @@ Cette édition intégrale et illustrée de Terremer réunit les romans qui ont f
 <p>Winner of the 2019 Locus Award for Best Art Book</p>
 
 <p>Illustré par Charles Vess, Traduit de l’anglais (États-Unis) par Isabelle Delord-Philippe, Pierre-Paul Durastanti, Patrick Dusoulier, Sébastien Guillot, Philippe R. Hupp, Françoise Maillet.</p>
+</section>
