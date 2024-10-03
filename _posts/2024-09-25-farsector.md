@@ -2,7 +2,6 @@
 layout: post
 title:  "Far Sector"
 date:   2024-09-02 18:18:28 +0200
-categories: fourth-lock
 ---
 Hé là, détectives cosmiques ! 🔍 Aujourd'hui, je plonge dans l'univers brillant de *Far Sector*, la passionnante série de bandes dessinées de N.K. Jemisin. Vous connaissez peut-être Jemisin pour ses romans révolutionnaires comme *The Fifth Season* et *The Broken Earth Trilogy*, mais saviez-vous qu'elle a également écrit une bande dessinée *Green Lantern* ? En effet, *Far Sector* suit les aventures de Jo Muller dans le monde entier. *Far Sector* suit Jo Mullein, une Green Lantern chargée de maintenir la paix dans la City Enduring, une métropole aux confins de l'univers où les émotions ont été réprimées pendant des siècles.
 

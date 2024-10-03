@@ -2,7 +2,6 @@
 layout: post
 title:  "Traduire, ré-ecrire, réinventer"
 date:   2024-09-01 18:18:28 +0200
-categories: fifth-lock
 ---
 La traduction, c'est bien plus que simplement convertir des mots d'une langue à une autre — c'est un art qui façonne le sens, la culture et la compréhension. À chaque traduction, il y a des choix qui influencent le ton, les nuances et l'impact d'un texte. Un seul mot peut changer toute l'interprétation d'un passage. Prenons cet exemple de citation : 
 
