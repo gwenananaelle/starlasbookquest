@@ -1,0 +1,18 @@
+---
+layout: post
+---
+{% capture clue_content %}
+<p>Le mot de passe est le nom d'un mythe que vous trouverez à l'aide de <a href="/2024/09/01/translation.html">ce post.</a></p>
+{% endcapture %}
+{% include lock.html title="Book 5" password="babel" lockNumber=5 clue=clue_content %}
+<section id="content-section5" class="hidden">
+<h1>Babel</h1>
+<p> Auteur: R. F. Kuang</p>
+<img src="/assets/images/babel.jpg" alt="couverture de Babel par R. F. Kuang">
+<p>"Un acte de traduction est toujours un acte de trahison.'- R. F. Kuang</p>
+<p>1828. Un jeune orphelin chinois est recueilli à Canton par un professeur et conduit à Londres. Rebaptisé Robin Swift, le jeune garçon consacre ses journées à l'étude des langues dans l'optique d'intégrer le prestigieux Institut royal de traduction de l'Université d'Oxford, plus connu sous le nom de Babel. Berceau de l'argentogravure, les étudiants y exploitent le sens perdu des mots à l'aide de barres d'argent enchantées.Dès ses premiers jours à Oxford, Robin prend conscience que ces travaux confèrent à l'Empire britannique une puissance inégalée et servent sa soif de colonisation, au détriment des classes défavorisées de la société et de ses territoires. Servir Babel revient donc à trahir sa patrie d'origine. Peut-il espérer changer Babel de l'intérieur ? Ou devra-t-il sacrifier ses rêves pour faire tomber cette institution ?</p>
+<p>Gagnant du Prix Nebula du meilleur roman 2022</p>
+
+<p>Traduit de l’anglais (États-Unis) par Michel Pagel</p>
+<p> le site de R. F. Kuang: https://rfkuang.com </p>
+</section>

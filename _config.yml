@@ -24,15 +24,23 @@ description: >- # this means to ignore newlines until "baseurl:"
   Blog littéraire de SFFF&F : science-fiction, fantasy, fantastique & feminisme !
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ""
-github_username:  captain-medusa
 
 # Build settings
-# theme: minima
+theme: minima
 plugins:
   - jekyll-feed
 
-remote_theme: "jeffreytse/jekyll-theme-yat"
+minima:
+  # Minima skin selection.
+  # Available skins are:
+  # classic	           Default, light color scheme.
+  # dark	             Dark variant of the classic skin.
+  # auto	             Adaptive skin based on the default classic and dark skins.
+  # solarized-light	   Light variant of solarized color scheme.
+  # solarized-dark	   Dark variant of solarized color scheme.
+  # solarized	         Adaptive skin for solarized color scheme skins.
+  skin: auto
+  date_format: '%b %-d, %Y'
 
 collections:
   locks:

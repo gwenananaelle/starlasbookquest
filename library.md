@@ -1,0 +1,9 @@
+---
+layout: page
+title: Library
+---
+<h1>Library</h1>
+
+{% for lock in site.locks %}
+<div>{{ lock.content | markdownify }}</div>
+{% endfor %}
