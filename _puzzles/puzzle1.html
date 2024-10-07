@@ -1,0 +1,18 @@
+---
+layout: puzzle
+title: Cosy Crew
+number: 1
+clue: ""
+password: "chambers"
+---
+
+{% assign filtered_posts = site.posts | where: 'puzzle-number', page.number %}
+{% for post in filtered_posts %}
+  <h1>{{ post.title }}</h1>
+  <div>{{ post.content | markdownify }}</div>
+{% endfor %}
+
+{% assign filtered_books = site.books | where: 'book-number', page.number %}
+{% for book in filtered_books %}
+  <div>{{ book.content | markdownify }}</div>
+{% endfor %}

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<h1>{{ page.name }}</h1>
+
+{{ content }}
+
+<div class="visible" id="lock-section{{page.number}}">
+  <p>Pour voir ce livre vous devez rentrer le mot de passe.</p>
+  <p>{{page.clue}}</p>
+  <input type="password" id="password-input{{page.number}}" placeholder="Enter password">
+  <button onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
+  <p id="error-message{{page.number}}" class="hidden">Incorrect password, try again.</p>
+</div>
+
+<script>
+function unlockPage(number, password) {
+  const inputPassword = document.getElementById(`password-input${number}`).value;
+  cleanedpassword = inputPassword.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g,'').toLowerCase();
+  if (cleanedpassword === password) {
+      // Store in localStorage that this page is unlocked
+      localStorage.setItem(`islocked${number}`, "false");
+      
+      // Hide the lock section and show the content
+      document.getElementById(`lock-section${number}`).classList.replace("visible", "hidden")
+      document.getElementById(`content-section${number}`).classList.replace("hidden", "visible")
+  } else {
+      // Show error message
+      document.getElementById(`error-message${number}`).classList.replace("hidden", "visible")
+  }
+}
+</script>

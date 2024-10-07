@@ -1,0 +1,37 @@
+<div class="visible" id="lock-section{{include.lockNumber}}">
+    <h1>{{ include.title }}</h1>
+    <p>Pour voir ce livre vous devez rentrer le mot de passe.</p>
+    <p>{{include.clue}}</p>
+    <input type="password" id="password-input{{include.lockNumber}}" placeholder="Enter password">
+    <button onclick="unlockPage()">Unlock</button>
+    <p id="error-message{{include.lockNumber}}" class="hidden">Incorrect password, try again.</p>
+</div>
+
+<script>
+    // Set the correct password for this page
+    const correctPassword = '{{include.password}}';
+    const lock = 'lock'+'{{include.lockNumber}}'
+
+    // Check if the page was already unlocked
+    if (localStorage.getItem(lock) === "false") {
+        document.getElementById('lock-section'+'{{include.lockNumber}}').classList.replace("visible", "hidden")
+        document.getElementById('content-section'+'{{include.lockNumber}}').classList.replace("hidden", "visible")
+    }
+
+    function unlockPage() {
+        const inputPassword = document.getElementById('password-input'+'{{include.lockNumber}}').value;
+        cleanedpassword = inputPassword.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g,'').toLowerCase();
+        if (cleanedpassword === correctPassword) {
+            // Store in localStorage that this page is unlocked
+            localStorage.setItem('lock', "false");
+            
+            // Hide the lock section and show the content
+            document.getElementById('lock-section'+'{{include.lockNumber}}').classList.replace("visible", "hidden")
+            document.getElementById('content-section'+'{{include.lockNumber}}').classList.replace("hidden", "visible")
+        } else {
+            // Show error message
+            document.getElementById('error-message'+'{{include.lockNumber}}').classList.replace("hidden", "visible")
+        }
+    }
+</script>
+
