@@ -13,6 +13,17 @@ layout: default
   <p id="error-message{{page.number}}" class="hidden">Incorrect password, try again.</p>
 </div>
 
+<div class="pagination">
+  {% if page.previous-page %}
+    <a href="{{ page.previous-page }}" class="previous">Previous</a>
+  {% endif %}
+
+  {% if page.next-page %}
+    <a href="{{ page.next-page }}" class="next">Next</a>
+  {% endif %}
+</div>
+
+
 <script>
 function unlockPage(number, password) {
   const inputPassword = document.getElementById(`password-input${number}`).value;
