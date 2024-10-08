@@ -7,14 +7,3 @@ password: "9781583226988"
 previous-page: /puzzles/puzzle3.html
 next-page: /puzzles/puzzle5.html
 ---
-
-{% assign filtered_posts = site.posts | where: 'puzzle-number', page.number %}
-{% for post in filtered_posts %}
-  <h1>{{ post.title }}</h1>
-  <p>{{ post.content | markdownify }}</p>
-{% endfor %}
-
-{% assign filtered_books = site.books | where: 'book-number', page.number %}
-{% for book in filtered_books %}
-  <div>{{ book.content | markdownify }}</div>
-{% endfor %}
