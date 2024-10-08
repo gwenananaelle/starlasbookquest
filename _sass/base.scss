@@ -1,9 +1,67 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+@charset "utf-8";
 
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url(../fonts/OpenDyslexic3-Regular.ttf);
+}
+
+$backgroundColor: #e4eff0;
+$bodyFont: "OpenDyslexic",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$text-color: #002439;
+
+// Define defaults for each variable.
+
+$base-font-family: "OpenDyslexic",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$link-base-color: #335853;
+$link-visited-color: #335853;
+$link-hover-color: #2f657a;
+
+
+/**
+ * Basic styling
+ */
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $backgroundColor;
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  max-width: 80vw;
+  margin: auto;
+}
+
+/**
+ * Links
+ */
+a {
+  color: $link-base-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
 }
