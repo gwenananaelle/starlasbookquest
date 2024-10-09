@@ -1,5 +1,3 @@
 {% for book in {{include.puzzle_books}} %}
-<section>
-  <div>{{ book.content | markdownify }}</div>
-</section>
+  {{ book.content | markdownify }}</div>
 {% endfor %}

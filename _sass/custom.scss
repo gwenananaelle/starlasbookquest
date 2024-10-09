@@ -17,6 +17,14 @@
     &.vertical-centered {
         align-items: center;
     }
+    &.col-600 {
+        @media only screen and (min-width: 1200px) {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-rows: minmax(0, 1fr) minmax(0, max-content);
+            grid-gap: 2%;
+            overflow: hidden;
+        }
+    }
     &.col-500 {
         @media only screen and (min-width: 1024px) {
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
