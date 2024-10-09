@@ -12,8 +12,10 @@ plugins:
 collections:
   puzzles:
     output: true
+    render_with_liquid: true
   books:
     output: true
+    render_with_liquid: true
 
 defaults:
   - scope:
