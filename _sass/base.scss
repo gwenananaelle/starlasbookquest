@@ -6,7 +6,6 @@
 }
 
 $backgroundColor: #FFFFFF;
-$bodyFont: "OpenDyslexic",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $text-color: #002439;
 
 // Define defaults for each variable.
@@ -18,10 +17,12 @@ $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$link-base-color: #335853;
-$link-visited-color: #335853;
-$link-hover-color: #2f657a;
-
+$link-base-color-dark: #262626;
+$link-visited-color-dark: #262626;
+$link-hover-color-dark: #595959;
+$link-base-color-light: #e5e5e5;
+$link-visited-color-light: #e5e5e5;
+$link-hover-color-light: #b2b2b2;
 
 /**
  * Basic styling
@@ -35,33 +36,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow-wrap: break-word;
-  max-width: 80vw;
-  margin: auto;
 }
 
-/**
- * Links
- */
-a {
-  color: $link-base-color;
-  text-decoration: none;
-
-  &:visited {
-    color: $link-visited-color;
-  }
-
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-}
-
-main {
-  display: grid;
-  place-items: center;
-}
-
-img {
-  max-width: 100%;
-  margin: auto;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }

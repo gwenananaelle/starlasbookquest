@@ -1,6 +1,4 @@
-.current {
-    color: green;
-}
+
 .hidden {
     display: none;
 }
@@ -13,20 +11,95 @@
     grid-template-columns: 1fr;
     align-items: start;
     justify-items: center;
+    &.horizontal-centered {
+        justify-items: center;
+    }
+    &.vertical-centered {
+        align-items: center;
+    }
     &.col-500 {
         @media only screen and (min-width: 1024px) {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 2%
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-rows: minmax(0, 1fr) minmax(0, max-content);
+            overflow: hidden;
+            &.row-2 {
+                grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+            }
         }
     }
     &.col-300 {
         @media only screen and (min-width: 900px) {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 2%
+            overflow: hidden;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            &.row-2 {
+                grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+            }
+            &.row-5 {
+                grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            }
         }
         @media only screen and (min-width: 1200px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 2%
+            grid-gap: 2%;
+            &.row-4 {
+                grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            }
         }
+    }
+}
+
+body {
+    a {
+        color: $link-base-color-dark;
+        text-decoration: none;
+        
+        &:visited {
+            color: $link-visited-color-dark;
+        }
+        
+        &:hover {
+            color: $link-hover-color-dark;
+            text-decoration: underline;
+        }
+    }
+    header, footer {
+        background-color: black;
+        color: white;
+        width: 100vw;
+        height: 100px;
+        a {
+            color: $link-base-color-light;
+            text-decoration: none;
+          
+            &:visited {
+              color: $link-visited-color-light;
+            }
+          
+            &:hover {
+              color: $link-hover-color-light;
+              text-decoration: underline;
+            }
+        }
+    }
+    nav {
+        div {
+            width: 80%;
+            margin: auto;
+            justify-self: start;
+            align-self: center;
+        }
+    }
+    main {
+        display: grid;
+        place-items: center;
+        max-width: 80vw;
+        margin: auto;
+        section {
+            margin: 25px auto;
+        }
+    } 
+    img {
+    max-width: 100%;
+    margin: auto;
     }
 }

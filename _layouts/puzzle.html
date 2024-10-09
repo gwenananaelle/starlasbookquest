@@ -9,15 +9,15 @@ layout: default
 {% assign filtered_books = site.books | where: 'book-number', page.number %}
 {% include filtered-books.html puzzle_books=filtered_books %}
 
-<div class="visible" id="lock-section{{page.number}}">
+<section class="visible" id="lock-section{{page.number}}">
   <p>Pour voir ce livre vous devez rentrer le mot de passe.</p>
   <p>{{page.clue}}</p>
   <input type="password" id="password-input{{page.number}}" placeholder="Enter password">
   <button onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
   <p id="error-message{{page.number}}" class="hidden">Incorrect password, try again.</p>
-</div>
+</section>
 
-<div class="pagination">
+<section class="pagination">
   {% if page.previous-page %}
     <a href="{{ page.previous-page }}" class="previous">Previous</a>
   {% endif %}
@@ -25,7 +25,7 @@ layout: default
   {% if page.next-page %}
     <a href="{{ page.next-page }}" class="next">Next</a>
   {% endif %}
-</div>
+</section>
 
 
 <script>
