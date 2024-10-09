@@ -9,6 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 # To upgrade, run `bundle update github-pages`.
 gem "github-pages", "~> 232", group: :jekyll_plugins
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
