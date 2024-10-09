@@ -9,7 +9,7 @@ book-number: 2
 <p> Auteur : Ursula K. Le Guin</p>
 <div class="wrapper-grid col-600">
     <div>
-        <img src="/assets/images/books/earthsea.jpg" alt="couverture de terremer">
+        <img src="{{ '/assets/images/books/earthsea.jpg' | absolute_url }}" alt="couverture de terremer">
     </div>
     <div>
         <p>

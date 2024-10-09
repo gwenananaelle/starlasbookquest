@@ -19,11 +19,11 @@ layout: default
 
 <section class="pagination">
   {% if page.previous-page %}
-    <a href="{{ page.previous-page }}" class="previous">Previous</a>
+    <a href="{{ page.previous-page | absolute_url }}" class="previous">Previous</a>
   {% endif %}
 
   {% if page.next-page %}
-    <a href="{{ page.next-page }}" class="next">Next</a>
+    <a href="{{ page.next-page | absolute_url}}" class="next">Next</a>
   {% endif %}
 </section>
 

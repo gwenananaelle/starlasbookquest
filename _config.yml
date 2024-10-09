@@ -2,8 +2,8 @@ title: Rebel Queen Starla’s bookquest
 email: captain.medusa@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
   Blog littéraire de SFFF&F : science-fiction, fantasy, fantastique & feminisme !
-baseurl: "/starlasbookquest" # the subpath of your site, e.g. /blog
-url: "https://captain-medusa.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 plugins:
   - jekyll-feed

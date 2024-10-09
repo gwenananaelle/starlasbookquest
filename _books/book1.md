@@ -8,7 +8,7 @@ book-number: 1
 <p> titre original : "Wayfarers"</p>
 <p> Auteur : Becky Chambers</p>
 <div class="wrapper-grid col-600">
-<div><img src="/assets/images/books/wayfarers.png" alt="couvertures des quatre tomes de la série les voyageurs"></div>
+<div><img src="{{ '/assets/images/books/wayfarers.png' | absolute_url }}" alt="couvertures des quatre tomes de la série les voyageurs"></div>
 <div>
 <p>
 La série <span>Les Voyageurs</span>(Wayfarers anglais) de Becky Chambers est souvent qualifiée de <span>cosy sci-fi</span> en raison de son atmosphère bienveillante et de son approche axée sur les relations humaines plutôt que sur les conflits galactiques. À travers ses quatre tomes :
