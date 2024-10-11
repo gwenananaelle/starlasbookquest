@@ -28,7 +28,7 @@ $link-hover-color-light: #b2b2b2;
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: 1.5 $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $backgroundColor;
   -webkit-text-size-adjust: 100%;
