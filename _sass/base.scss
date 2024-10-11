@@ -15,7 +15,7 @@ $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mo
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1.6 !default;
 
 $link-base-color-dark: #262626;
 $link-visited-color-dark: #262626;
@@ -28,7 +28,7 @@ $link-hover-color-light: #b2b2b2;
  * Basic styling
  */
 body {
-  font: 1.5 $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $backgroundColor;
   -webkit-text-size-adjust: 100%;
