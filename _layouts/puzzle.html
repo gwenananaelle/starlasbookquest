@@ -6,8 +6,24 @@ layout: default
 {% assign filtered_posts = site.posts | where: 'puzzle-number', page.number %}
 {% include filtered-posts.html puzzle_posts=filtered_posts %}
 
-{% assign filtered_books = site.books | where: 'book-number', page.number %}
-{% include filtered-books.html puzzle_books=filtered_books %}
+<section id="content-section{{ page.number }}" class="hidden">
+  {% assign filtered_books = site.books | where: 'book-number', page.number %}
+  {% for book in filtered_books %}
+  {% if book.title %}<h1>{{ book.title }}</h1>{% endif %}
+  {% if book.original-title %}<p>Titre original : {{ book.original-title }}</p>{% endif %}
+  {% if book.author %}<p>Auteur : {{ book.author }}</p>{% endif %}
+      <div class="wrapper-grid col-600">
+        {% if book.img-url %}  
+          <div>
+              <img src="{{ book.img-url | absolute_url }}" alt="Couverture du livre">
+          </div>
+          {% endif %}
+          <div>
+              {{ book.content | markdownify }}
+          </div>
+      </div>
+  {% endfor %}
+</section>
 
 <section class="visible" id="lock-section{{page.number}}">
   <p>Pour voir ce livre vous devez rentrer le mot de passe.</p>

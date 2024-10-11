@@ -36,6 +36,9 @@
         }
     }
     &.col-300 {
+        .crew-item {
+            justify-self: start;
+        }
         @media only screen and (min-width: 900px) {
             overflow: hidden;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -45,6 +48,7 @@
             &.row-5 {
                 grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
             }
+
         }
         @media only screen and (min-width: 1200px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -103,11 +107,16 @@ body {
         max-width: 80vw;
         margin: auto;
         section {
-            margin: 25px auto;
+            margin: auto;
+            max-width: 80vw;
         }
     } 
+    figure {
+        margin: auto;
+    }
     img {
-    max-width: 100%;
-    margin: auto;
+        width: 100%;
+        max-width: 80vw;
+        margin: auto;
     }
 }
