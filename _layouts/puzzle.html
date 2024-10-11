@@ -45,6 +45,11 @@ layout: default
 
 
 <script>
+    // Check if the page was already unlocked
+    if (localStorage.getItem('islocked'+'{{page.number}}') === "false") {
+        document.getElementById('lock-section'+'{{page.number}}').classList.replace("visible", "hidden");
+        document.getElementById('content-section'+'{{page.number}}').classList.replace("hidden", "visible");
+    }
 function unlockPage(number, password) {
   const inputPassword = document.getElementById(`password-input${number}`).value;
   cleanedpassword = inputPassword.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g,'').toLowerCase();
