@@ -1,0 +1,46 @@
+---
+- name: Arzt
+  subfolderitems:
+    - description: Joues en forme de ballon
+    - description: Six membres
+    - description: Porte un t-shirt avec un logo vert et un pantalon.
+
+- name: Elsix
+  subfolderitems:
+    - description: Écailles vertes mousse qui s'estompent en une teinte plus pâle sur son ventre.
+    - description: Pas de nez, pas de lèvres, pas d'oreilles
+    - description: Crinière de plumes multicolores
+
+- name: Heloïse
+  subfolderitems:
+    - description: Cheveux noirs attachés en chignon avec un ruban
+    - description: Porte une combinaison orange
+    - description: Notes manuscrites hâtives griffonnées sur les manches
+
+- name: Robin
+  subfolderitems:
+    - description: Pratiquement rose
+    - description: Homme
+
+- name: San
+  subfolderitems:
+    - description: Marche à quatre pattes avec de longs doigts
+    - description: Dos courbé, recouvert d'une fourrure bleu glacier
+    - description: Énormes yeux humides à longues paupières
+
+- name: Cain
+  subfolderitems:
+    - description: Petit et trapu
+    - description: Côté de la tête rasé, avec une touffe de boucles au sommet
+    - description: Tatouages et piercings
+
+- name: Bobby
+  subfolderitems:
+    - description: Boucles noires serrées
+    - description: Peau ambrée
+
+- name: Mary Rose
+  subfolderitems:
+    - description: Peau cuivrée, plus claire que celle de Cain
+    - description: Plus petite qu'Elsix
+    - description: Cheveux bruns bouclés
