@@ -26,11 +26,11 @@ layout: default
 </section>
 
 <section class="visible" id="lock-section{{page.number}}">
-  <p>Pour voir ce livre vous devez rentrer le mot de passe.</p>
+  <p>En trouvant le mot de passe, vous débloquerez un nouveau livre dans la bibliothèque de Starla.</p>
   <p>{{page.clue}}</p>
   <input type="password" id="password-input{{page.number}}" placeholder="Enter password">
   <button onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
-  <p id="error-message{{page.number}}" class="hidden">Incorrect password, try again.</p>
+  <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
 </section>
 
 <section class="pagination">
