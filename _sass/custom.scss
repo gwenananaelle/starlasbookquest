@@ -1,16 +1,7 @@
-
-.hidden {
-    display: none;
-}
-.visible {
-    display: block;
-}
-
 .wrapper-grid {
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
-    justify-items: center;
     &.horizontal-centered {
         justify-items: center;
     }
@@ -62,33 +53,33 @@
 
 body {
     a {
-        color: $link-base-color-dark;
+        color: $secondary-color;
         text-decoration: none;
         
         &:visited {
-            color: $link-visited-color-dark;
+            color: $secondary-color;
         }
         
         &:hover {
-            color: $link-hover-color-dark;
+            color: $secondary-color;
             text-decoration: underline;
         }
     }
     header, footer {
-        background-color: black;
-        color: white;
+        background-color: $primary-color;
+        color: $on-primary-color;
         width: 100vw;
         min-height: max-content;
         a {
-            color: $link-base-color-light;
+            color: $on-primary-color;
             text-decoration: none;
           
             &:visited {
-              color: $link-visited-color-light;
+              color: $on-primary-color;
             }
           
             &:hover {
-              color: $link-hover-color-light;
+              color: $on-primary-color;
               text-decoration: underline;
             }
         }
@@ -105,10 +96,16 @@ body {
         display: grid;
         place-items: center;
         max-width: 80vw;
-        margin: auto;
+        margin: 5% auto;
         section {
-            margin: auto;
+            margin: 2% auto;
             max-width: 80vw;
+            &.hidden {
+                display: none;
+            }
+            &.visible {
+                display: block;
+            }
         }
     } 
     figure {
@@ -118,5 +115,31 @@ body {
         width: 100%;
         max-width: 80vw;
         margin: auto;
+    }
+}
+
+a.button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: .75em 1em;
+    border: none;
+    border-radius: .2em;
+    cursor: pointer;
+    background-color: $secondary-color;
+    color: $on-secondary-color;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all 0.15s linear;
+    &:visited {
+        color: $on-secondary-color;
+    }
+    &:hover
+    {
+    background-color: mix(#fff, $secondary-color, 20%);
     }
 }

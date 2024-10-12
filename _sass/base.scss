@@ -7,7 +7,11 @@
 
 $backgroundColor: #FFFFFF;
 $text-color: #002439;
-
+$primary-color: #424663;
+$on-primary-color: #ececef;
+$secondary-color: #583344;
+$on-secondary-color: #eeeaec;
+$error-color: #cf1133;
 // Define defaults for each variable.
 
 $base-font-family: "OpenDyslexic",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -16,13 +20,6 @@ $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.6 !default;
-
-$link-base-color-dark: #262626;
-$link-visited-color-dark: #262626;
-$link-hover-color-dark: #595959;
-$link-base-color-light: #e5e5e5;
-$link-visited-color-light: #e5e5e5;
-$link-hover-color-light: #b2b2b2;
 
 /**
  * Basic styling
@@ -38,6 +35,6 @@ body {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .button {
   font-family: Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }

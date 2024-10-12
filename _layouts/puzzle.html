@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
+<h1>{{ page.title }}</h1>
 
 {% assign filtered_posts = site.posts | where: 'puzzle-number', page.number %}
 {% include filtered-posts.html puzzle_posts=filtered_posts %}
@@ -35,11 +35,11 @@ layout: default
 
 <section class="pagination">
   {% if page.previous-page %}
-    <a href="{{ page.previous-page | absolute_url }}" class="previous">Previous</a>
+    <a href="{{ page.previous-page | absolute_url }}" class="previous button">PREVIOUS</a>
   {% endif %}
 
   {% if page.next-page %}
-    <a href="{{ page.next-page | absolute_url}}" class="next">Next</a>
+    <a href="{{ page.next-page | absolute_url}}" class="next button">NEXT</a>
   {% endif %}
 </section>
 
