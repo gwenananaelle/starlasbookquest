@@ -12,8 +12,8 @@ Terremer est un lieu magique et ensorcelé. Une mer immense recouverte d’un ch
 Cette édition intégrale et illustrée de Terremer réunit les romans qui ont fait le succès de ce cycle mythique et emblématique de l’œuvre d’Ursula K. Le Guin, ainsi que deux nouvelles inédites en France et une introduction de l’auteur écrite spécialement pour cette édition.<br>
 The Books of Earthsea was published in 2018 by Saga Press.<br>
 Terremer l'intégrale a été publié en 2018 par Le Livre de Poche<br>
-- Winner of the 2019 Hugo Award for Best Art Book</p>
-- Winner of the 2019 Locus Award for Best Art Book</p>
+- Winner of the 2019 Hugo Award for Best Art Book
+- Winner of the 2019 Locus Award for Best Art Book
 
 Illustré par Charles Vess, Traduit de l’anglais (États-Unis) par Isabelle Delord-Philippe, Pierre-Paul Durastanti, Patrick Dusoulier, Sébastien Guillot, Philippe R. Hupp, Françoise Maillet.<br>
 
