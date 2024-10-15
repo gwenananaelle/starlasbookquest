@@ -1,7 +1,7 @@
-<div class="wrapper-grid col-300 row-2 ">
+<div class="grid grid-1-to-3up grid-1-to-4up">
     {% for item in site.data.crew %}
-        <div class="crew-item">
-            <h3>{{ item.name }}</h3>
+        <div>
+            <h5>{{ item.name }}</h5>
             <ul>
                 {% for entry in item.subfolderitems %}
                     <li>{{ entry.description }}</li>

@@ -1,7 +1,17 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<h3>{{ page.title }}</h3>
+
+<section class="visible lock-section" id="lock-section{{page.number}}">
+  <p>En trouvant le mot de passe, vous débloquerez un nouveau livre dans la bibliothèque de Starla.</p>
+  <p>{{page.clue}}</p>
+  <div class="grid grid-2up">
+    <input type="password" id="password-input{{page.number}}" placeholder="Enter password">
+    <button class="button" onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
+  </div>
+  <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
+</section>
 
 {% assign filtered_posts = site.posts | where: 'puzzle-number', page.number %}
 {% include filtered-posts.html puzzle_posts=filtered_posts %}
@@ -12,7 +22,7 @@ layout: default
   {% if book.title %}<h1>{{ book.title }}</h1>{% endif %}
   {% if book.original-title %}<p>Titre original : {{ book.original-title }}</p>{% endif %}
   {% if book.author %}<p>Auteur : {{ book.author }}</p>{% endif %}
-      <div class="wrapper-grid col-600">
+      <div class="grid grid-2up">
         {% if book.img-url %}  
           <div>
               <img src="{{ book.img-url | absolute_url }}" alt="Couverture du livre">
@@ -23,14 +33,6 @@ layout: default
           </div>
       </div>
   {% endfor %}
-</section>
-
-<section class="visible" id="lock-section{{page.number}}">
-  <p>En trouvant le mot de passe, vous débloquerez un nouveau livre dans la bibliothèque de Starla.</p>
-  <p>{{page.clue}}</p>
-  <input type="password" id="password-input{{page.number}}" placeholder="Enter password">
-  <button onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
-  <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
 </section>
 
 <section class="pagination">

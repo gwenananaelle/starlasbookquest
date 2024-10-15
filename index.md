@@ -12,7 +12,7 @@ En cas de problème technique ou si vous êtes vraiment bloqué, vous pouvez tou
 <ul>
   {% for puzzle in site.puzzles %}
     <li>
-      <h2><a href="{{ puzzle.url | absolute_url}}">{{ puzzle.title }}</a></h2>
+      <h5><a href="{{ puzzle.url | absolute_url}}">{{ puzzle.title }}</a></h5>
     </li>
   {% endfor %}
 </ul>
