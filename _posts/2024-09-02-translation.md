@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Communication et Confusion"
+title:  "Écrire et Traduire"
 date:   2024-09-02 18:18:28 +0200
 puzzle-number: 5
 ---

@@ -37,17 +37,48 @@
 --space-xl-2xl: clamp(3rem, 2.7143rem + 1.4286vw, 5rem);
 --space-2xl-3xl: clamp(4rem, 3.5rem + 2.5vw, 7.5rem);
   
-  /* Grid */
-  --grid-max-width: 77.50rem;
-  --grid-gutter: var(--space-s-l, clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem));
-  --grid-columns: 12;
+/* Grid */
+--grid-max-width: 77.50rem;
+--grid-gutter: var(--space-s-l, clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem));
+--grid-columns: 12;
+}
+.grid {
+  display: grid;
+  gap: var(--grid-gutter);
+  &.no-gap {
+      gap:0;
+  }
+}
+.grid-2up {
+  @media all and (min-width: 40rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.grid-1-to-3up {
+  @media all and (min-width: 50rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.grid-1-to-4up {
+  @media all and (min-width: 60rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.grid-1-to-5up {
+  @media all and (min-width: 70rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+.grid-2-to-4up {
+  @media all and (min-width: 60rem) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
+/* Colors */
 $backgroundColor: #EFEEEA;
 $text-color: #1a1813;
 $primary-color: #AA6E4C;
-$primary-color-dark: #6B4630;
-$primary-color-ligh: #D2AF9B;
 $on-primary-color: #EFEEEA;
 $secondary-color: #505245;
 $on-secondary-color: #EFEEEA;
@@ -69,18 +100,11 @@ body {
   background-color: $backgroundColor;
   -webkit-text-size-adjust: 100%;
 }
-main, header > div, footer > div {
-  max-width: clamp(320px, 60vw, 960px);
-  margin: auto;
-}
-section {
-  max-width: 100%;
-  margin: var(--space-m) auto;
-}
 
-h1, h2, h3, h4, h5, h6, .button {
+h1, h2, h3, h4, h5, h6 {
   font-family: Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   margin: auto;
+  color: $secondary-color;
 }
 h1 {
   font-size: var(--step-6);

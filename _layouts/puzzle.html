@@ -22,9 +22,9 @@ layout: default
   {% if book.title %}<h1>{{ book.title }}</h1>{% endif %}
   {% if book.original-title %}<p>Titre original : {{ book.original-title }}</p>{% endif %}
   {% if book.author %}<p>Auteur : {{ book.author }}</p>{% endif %}
-      <div class="grid grid-2up">
+      <div class="float">
         {% if book.img-url %}  
-          <div>
+          <div class="float-left">
               <img src="{{ book.img-url | absolute_url }}" alt="Couverture du livre">
           </div>
           {% endif %}
