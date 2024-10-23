@@ -4,6 +4,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Blog littéraire de SFFF&F : science-fiction, fantasy, fantastique & feminisme !
 baseurl: "" # the subpath of your site, e.g. /starlasbookquest
 url: "" # the base hostname & protocol for your site, e.g. https://gwenananaelle.github.io
+lang: fr 
+languages: ["en", "fr"]
 
 plugins:
   - jekyll-feed
@@ -19,21 +21,27 @@ collections:
 
 defaults:
   - scope:
-      path: ""
-      type: "puzzles"
+      path: '_puzzles/en'
+      type: 'puzzles'
     values:
-      layout: "puzzle"
+      layout: 'puzzle'
   - scope:
-      path: ""
-      type: "books"
+      path: '_puzzles/fr'
+      type: 'puzzles'
     values:
-      layout: "post"
+      layout: 'puzzle'
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'books'
     values:
-      layout: "post"
+      layout: 'post'
   - scope:
-      path: ""
+      path: '_posts/en'
+      type: 'posts'
     values:
-      layout: "default"
+      layout: 'post'
+  - scope:
+      path: '_posts/fr'
+      type: 'posts'
+    values:
+      layout: 'post'

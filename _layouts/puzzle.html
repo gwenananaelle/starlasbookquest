@@ -13,27 +13,15 @@ layout: default
   <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
 </section>
 
-{% assign filtered_posts = site.posts | where: 'puzzle-number', page.number %}
-{% include filtered-posts.html puzzle_posts=filtered_posts %}
+{% assign filtered_posts_lang = site.posts | where: 'lang', page.lang %}
+{% assign filtered_posts_puzzle = filtered_posts_lang | where: 'puzzle-number', page.number %}
+{% include filtered-posts.html puzzle_posts = filtered_posts_puzzle %}
+{% assign filtered_posts_puzzle = filtered_posts_lang | where: 'puzzle-number', page.number %}
 
-<section id="content-section{{ page.number }}" class="hidden">
-  {% assign filtered_books = site.books | where: 'book-number', page.number %}
-  {% for book in filtered_books %}
-  {% if book.title %}<h1>{{ book.title }}</h1>{% endif %}
-  {% if book.original-title %}<p>Titre original : {{ book.original-title }}</p>{% endif %}
-  {% if book.author %}<p>Auteur : {{ book.author }}</p>{% endif %}
-      <div class="float">
-        {% if book.img-url %}  
-          <div class="float-left">
-              <img src="{{ book.img-url | absolute_url }}" alt="Couverture du livre">
-          </div>
-          {% endif %}
-          <div>
-              {{ book.content | markdownify }}
-          </div>
-      </div>
-  {% endfor %}
-</section>
+{% assign page-number = page.number %}
+{% assign page-lang = page.lang %}
+{% include book.html page-number = page-number page-lang = page-lang %}
+
 
 <section class="pagination">
   {% if page.previous-page %}
