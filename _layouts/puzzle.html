@@ -4,10 +4,14 @@ layout: default
 <h3>{{ page.title }}</h3>
 
 <section class="visible lock-section" id="lock-section{{page.number}}">
+  {% if page.lang == 'fr' %}
   <p>En trouvant le mot de passe, vous débloquerez un nouveau livre dans la bibliothèque de Starla.</p>
+  {% elsif page.lang == 'en' %}
+  <p>Find the password to unlock a new book in Starla's library</p>
+  {% endif %}
   <p>{{page.clue}}</p>
   <div class="grid grid-2up">
-    <input type="password" id="password-input{{page.number}}" placeholder="Enter password">
+    <input type="text" id="password-input{{page.number}}" placeholder="Enter password">
     <button class="button" onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
   </div>
   <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
