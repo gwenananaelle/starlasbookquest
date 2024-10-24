@@ -1,5 +1,17 @@
 <div class="grid grid-1-to-3up grid-1-to-4up">
-    {% for item in site.data.crew.fr %}
+    {% assign crew_data = "" %}
+
+    <!-- Assign the correct data based on the language -->
+    {% if page.path contains 'fr' %}
+        {% assign crew_data = site.data.crew.fr %}
+    {% elsif page.path contains 'en' %}
+        {% assign crew_data = site.data.crew.en %}
+    {% else %}
+        {% assign crew_data = site.data.crew.en %}
+    {% endif %}
+
+    <!-- Loop through the crew data -->
+    {% for item in crew_data %}
         <div>
             <h5>{{ item.name }}</h5>
             <ul>

@@ -74,7 +74,10 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
 /* Colors */
 $backgroundColor: #EFEEEA;
 $text-color: #1a1813;
